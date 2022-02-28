@@ -28,6 +28,8 @@ public class Book {
 	private double price;
 	private long stock;
 
+    private int port;
+	
 }
 
 

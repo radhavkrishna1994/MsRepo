@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
@@ -16,6 +17,14 @@ import com.training.entities.Book;
 import com.training.repo.BookRepo;
 import com.training.repo.CustomerRepo;
 
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+
+
+
+@OpenAPIDefinition(info = @Info(title = "Books API", version = "2.0", description = "Books Information"))
+@EnableDiscoveryClient
 @SpringBootApplication
 public class SpringBootBookProducerProjectDbApplication {
 
